@@ -1,0 +1,167 @@
+:root {
+    /* e.g.: bcyan => bright cyan */
+    --gnome-backgrond-color: #1E1E1E;
+    --gnome-black: #2E3436;
+    --gnome-bblack: #555753;
+    --gnome-blue: #3465A4;
+    --gnome-bblue: #729FCF;
+    --gnome-magenta: #75507B;
+    --gnome-bmagenta: #AD7FA8;
+    --gnome-white: #D3D7CF;
+    --gnome-bwhite: #EEEEEC;
+    --gnome-green: #4E9A06;
+    --gnome-bgreen: #8AE234;
+    --gnome-cyan: #06989A;
+    --gnome-bcyan: #34E2E2;
+    --gnome-red: #CC0000;
+    --gnome-bred: #EF2929;
+    --btn-color: #1111;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    transform: translateY(2.2em);
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-container-content {
+    padding: 1em;
+    max-width: 1000px;
+}
+
+#terminal {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background-color: var(--gnome-backgrond-color);
+    color: var(--gnome-white);
+    max-width: 1000px;
+    width: 600px;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 8px;
+}
+
+/* #terminal .line {
+} */
+
+#terminal .user-at-machine, #terminal .user-at-machine-symbol {
+    color: var(--gnome-green);
+    /* font-weight: 400; */
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 821px) {
+    #terminal .user-at-machine {
+        display: none;
+    }
+}
+
+#terminal .command {
+    margin-left: 1em;
+}
+
+#terminal .command .text {
+    color: var(--gnome-cyan);
+}
+
+@keyframes current_line_underline_anim {
+    0%, 60% {
+        opacity: 1;
+    }
+    61%, 100% {
+        opacity: 0;
+    }
+}
+
+#terminal .line.current::after {
+    content: "_";
+    font-size: large;
+    font-weight: 500;
+    animation: current_line_underline_anim 1.5s linear 0s infinite;
+}
+
+#about-me-container {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    color: var(--gnome-black);
+    font-weight: 500;
+    font-style: normal;
+    font-size: large;
+    /* background-color: #AD7FA8;  */
+    width: auto;
+}
+
+#about-me-container p {
+    max-width: 90%;
+}
+
+#greetings {
+    font-weight: 400;
+    color: var(--gnome-bblack);
+}
+
+#about-me {
+    transform: translateY(-20px);
+}
+
+#about-me .title {
+    font-weight: 700;
+}
+
+#about-me span#my-job {
+    font-weight: 900;
+    background-color: var(--gnome-green);
+    color: var(--gnome-bwhite);
+    padding: 0.1em;
+    margin-left: 3px;   
+}
+
+#my-contacts {
+  display: flex;
+  justify-content: start; 
+  gap: 5em;
+  align-items: center;
+  margin-left: 15px;
+  height: 150px;
+}
+
+#my-contacts span a {
+    /* font-family: "Inter", sans-serif; */
+    font-optical-sizing: auto;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--gnome-bwhite);
+}
+
+#my-contacts span a::before {
+    content: "";
+    /* color: ; */
+    position: relative;
+    background-color: var(--gnome-bblue);
+    transform: translateY(100%);
+    padding-left: 10px;
+    height: 25px;
+    outline: 5px solid var(--gnome-bblue);
+    display: block;
+    z-index: -1;
+}
+
