@@ -22,7 +22,7 @@ function AboutMe({onPointerOverCallBack, onClickCallBack, onPointerOutCallBack})
   return (
     <div className="main-container-content" id="about-me-container">
       <div id="about-me">
-        <p id="greetings">Welcome to my portfolio!</p>
+        <p id="greetings" className="sub-title">| Welcome to my portfolio!</p>
 
         <h1 className="title">
           I'm Vitor an <span id="my-job">Software Developer</span>

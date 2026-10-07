@@ -98,7 +98,7 @@ body {
     animation: current_line_underline_anim 1.5s linear 0s infinite;
 }
 
-#about-me-container {
+#about-me-container, #my-projects-container {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     color: var(--gnome-black);
@@ -106,24 +106,30 @@ body {
     font-style: normal;
     font-size: large;
     /* background-color: #AD7FA8;  */
-    width: auto;
+    /* border: 2px solid #dbded8; */
+    /* border-radius: 0px 30px 30px 30px; */
+    width: 800px;
 }
 
-#about-me-container p {
+#about-me-container p, #my-projects-container p {
     max-width: 90%;
+    text-align: justify;
 }
 
-#greetings {
+.sub-title{
     font-weight: 400;
+    font-size: 1.4rem;
     color: var(--gnome-bblack);
 }
 
-#about-me {
-    transform: translateY(-20px);
+#about-me, #my-projects {
+    transform: translateY(-10px);
 }
 
-#about-me .title {
+h1.title {
     font-weight: 700;
+    margin-bottom: 40px;
+    /* margin-top: 100px; */
 }
 
 #about-me span#my-job {
@@ -138,9 +144,13 @@ body {
   display: flex;
   justify-content: start; 
   gap: 5em;
-  align-items: center;
+  align-items: end;
   margin-left: 15px;
-  height: 150px;
+  height: 180px;
+}
+
+#my-contacts span {
+    transform: translateY(-40px);
 }
 
 #my-contacts span a {
